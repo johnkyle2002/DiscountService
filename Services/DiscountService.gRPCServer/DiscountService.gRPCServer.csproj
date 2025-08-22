@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>164928c6-50a7-4c2e-9adb-b65353833ebf</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup> 
+    <PackageReference Include="Grpc.AspNetCore" Version="2.71.0" /> 
+    <PackageReference Include="Grpc.AspNetCore.Server.Reflection" Version="2.71.0" /> 
+    <PackageReference Include="Grpc.Net.Client" Version="2.71.0" /> 
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+	<PackageReference Include="Grpc.Tools" Version="2.72.0" PrivateAssets="All" />
+	<PackageReference Include="Google.Protobuf" Version="3.32.0" />
+  </ItemGroup>
+
+	<ItemGroup> 
+		<Protobuf Include="Proto\discountCode.proto" GrpcServices="Server" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DiscountService.CodeService\DiscountService.CodeService.csproj" />
+  </ItemGroup>
+	 
+
+</Project>

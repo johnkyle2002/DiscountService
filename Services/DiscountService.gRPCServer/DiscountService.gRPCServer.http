@@ -1,0 +1,15 @@
+@DiscountService.gRPCServer_HostAddress = http://localhost:5207
+
+ 
+### Generate discount codes
+GRPC http://localhost:5207 DiscountService.DiscountService/Generate
+{
+  "count": 5,
+  "length": 8
+}
+
+### Use a discount code
+GRPC http://localhost:5207 DiscountService.DiscountService/UseCode
+{
+  "code": "ABC1234"
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DiscountService.TCP": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

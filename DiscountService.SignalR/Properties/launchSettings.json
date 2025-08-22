@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DiscountService.SignalR": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
